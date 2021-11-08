@@ -53,7 +53,7 @@ ul {
 }
 
 .header__title_wrapper {
-	margin-bottom: 1rem;
+	margin-bottom: 2.5rem;
 	flex-grow: 1;
 }
 
@@ -94,10 +94,6 @@ ul {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: -0.9px;
-}
-
-.content__section {
-	margin: 1rem 0;
 }
 
 .content__lists {
