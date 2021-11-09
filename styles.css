@@ -133,11 +133,19 @@ ul {
 }
 
 .item__image {
+	display: block;
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	backface-visibility: hidden;
 	object-fit: cover;
+	transition: transform 0.3s ease 0s;
+}
+
+.item__image:hover {
+	transform: scale(1.01);
 }
 
 .item__body {
