@@ -4,19 +4,18 @@
 	const challenges = [
 		{
 			title: 'Huddle landing page with alternating feature blocks',
-			stack: ['HTML', 'CSS', 'JS'],
-			'repo-link': 'github.com',
-			'live-link': 'frontendmentor.com',
+			stack: ['HTML', 'CSS'],
+			'repo-link': './huddle-challenge-landing-page/',
+			'live-link': './huddle-challenge-landing-page/',
 			'image-link':
 				'./huddle-challenge-landing-page/design/desktop-preview.jpg',
 		},
 		{
-			title: 'Huddle landing page with alternating feature blocks 1',
-			stack: ['HTML', 'CSS'],
-			'repo-link': 'github.com',
-			'live-link': 'frontendmentor.com',
-			'image-link':
-				'https://images.unsplash.com/photo-1624265853364-12b264a2f903?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
+			title: 'Clipboard landing page',
+			stack: ['HTML', 'SASS'],
+			'repo-link': './clipboard-landing-page',
+			'live-link': './clipboard-landing-page',
+			'image-link': './clipboard-landing-page/design/desktop-preview.jpg',
 		},
 		{
 			title: 'Huddle landing page with alternating feature blocks 2',
@@ -67,6 +66,8 @@
 		const live_text = document.createTextNode('live');
 		a_repo.href = challenge['repo-link'];
 		a_live.href = challenge['live-link'];
+		a_live.target = '_blank';
+		a_live.target = '_blank';
 		img.src = challenge['image-link'];
 		img.width = 500;
 		img.height = 250;

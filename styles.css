@@ -112,8 +112,6 @@ ul {
 
 .fm__item {
 	margin: 1rem;
-	border: 1px solid var(--grayish-green);
-	border-radius: 10px;
 }
 
 .item__card {
