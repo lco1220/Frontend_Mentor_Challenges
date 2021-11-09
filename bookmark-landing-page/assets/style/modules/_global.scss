@@ -1,0 +1,152 @@
+@import 'variables';
+
+.container {
+  width: 100vw;
+
+  display: grid;
+  grid: 
+      "header header header header" 
+      "main main main main"
+      "footer footer footer footer" / auto;
+}
+
+.container__inner {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 575.98px) { 
+  .container__inner {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container__inner {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container__inner {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container__inner {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container__inner {
+    max-width: 1140px;
+  }
+}
+
+h1, 
+h2 {
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  padding: 3em 0;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.grid {
+  display: grid;
+}
+
+.link {
+  font-size: .75rem;
+  color: $very-dark-blue;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 250ms ease-in;
+
+  &:hover {
+    color: $primary-soft-red;
+  }
+
+}
+
+.button {
+  cursor: pointer;
+  color: $grayish-blue;
+  padding: 0.70em 1.9em;
+  background: whitesmoke;
+  border-radius: 5px;
+  transition: all 250ms ease-in;
+  box-shadow: 0px 5px 10px -4px rgb(201, 201, 201);
+}
+
+.button--white {
+
+  &:hover {
+    color: $very-dark-blue;
+    border: 1px solid $very-dark-blue;
+  }
+}
+
+.button--blue {
+  background-color: $primary-soft-blue;
+  border: 1px solid $primary-soft-blue;
+  color: whitesmoke;
+
+  &:hover {
+    border: 1px solid $primary-soft-blue;
+    color: $primary-soft-blue;
+    background-color: #fff;
+  }
+
+}
+
+.button--red {
+  background-color: $primary-soft-red;
+  border: 1px solid $primary-soft-red;
+  color: #fff;
+
+  &:hover {
+    border: 1px solid $primary-soft-red;
+    color: $primary-soft-red;
+    background-color: #fff;
+  }
+
+}
