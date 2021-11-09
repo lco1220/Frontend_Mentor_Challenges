@@ -5,24 +5,24 @@
 		{
 			title: 'Huddle landing page with alternating feature blocks',
 			stack: ['HTML', 'CSS', 'JS'],
-			'repo-link': 'This is a link',
-			'live-link': 'link for the live website',
+			'repo-link': 'github.com',
+			'live-link': 'frontendmentor.com',
 			'image-link':
 				'https://images.unsplash.com/photo-1624265853364-12b264a2f903?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
 		},
 		{
 			title: 'Huddle landing page with alternating feature blocks 1',
 			stack: ['HTML', 'CSS', 'JS'],
-			'repo-link': 'This is a link',
-			'live-link': 'link for the live website',
+			'repo-link': 'github.com',
+			'live-link': 'frontendmentor.com',
 			'image-link':
 				'https://images.unsplash.com/photo-1624265853364-12b264a2f903?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
 		},
 		{
 			title: 'Huddle landing page with alternating feature blocks 2',
 			stack: ['HTML', 'SASS', 'JS'],
-			'repo-link': 'This is a link',
-			'live-link': 'link for the live website',
+			'repo-link': 'github.com',
+			'live-link': 'frontendmentor.com',
 			'image-link':
 				'https://images.unsplash.com/photo-1624265853364-12b264a2f903?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
 		},
@@ -36,14 +36,15 @@
 		const div_card = document.createElement('div');
 		const div_image = document.createElement('div');
 		const div_body = document.createElement('div');
-		const li_repo = document.createElement('li');
-		const li_site = document.createElement('li');
-
 		const img = document.createElement('img');
 		const h3 = document.createElement('h3');
 		const div_meta = document.createElement('div');
-		const ul_language = document.createElement('item__lang_lists');
-		const ul_links = document.createElement('item__links_lists');
+		const ul_language = document.createElement('ul');
+		const ul_links = document.createElement('ul');
+		const li_repo = document.createElement('li');
+		const li_site = document.createElement('li');
+		const a_repo = document.createElement('a');
+		const a_live = document.createElement('a');
 
 		// Class
 		li.classList.add('fm__item');
@@ -57,11 +58,17 @@
 		ul_links.classList.add('item__links_lists');
 		li_repo.classList.add('item__link_list');
 		li_site.classList.add('item__link_list');
+		a_repo.classList.add('item__link');
+		a_live.classList.add('item__link');
 
 		// Value
 		const text_h3 = document.createTextNode(challenge.title);
+		const repo_text = document.createTextNode('repo');
+		const live_text = document.createTextNode('live');
+		a_repo.href = challenge['repo-link'];
+		a_live.href = challenge['live-link'];
 		img.src = challenge['image-link'];
-
+		console.log(a_repo);
 		// Stack
 		challenge.stack.forEach((lang) => {
 			const li_lang = document.createElement('li');
@@ -80,10 +87,28 @@
 				const li_text = document.createTextNode(lang);
 				li_lang.appendChild(li_text);
 			}
-			console.log(li_lang);
+			// console.log(li_lang);
+			ul_language.insertAdjacentElement('beforeend', li_lang);
 		});
 
+		// Append Text
 		h3.appendChild(text_h3);
+		a_repo.appendChild(repo_text);
+		a_live.appendChild(live_text);
+
 		div_image.appendChild(img);
+		ul_links.insertAdjacentElement('beforeend', a_repo);
+		ul_links.insertAdjacentElement('beforeend', a_live);
+
+		div_meta.insertAdjacentElement('beforeend', ul_language);
+		div_meta.insertAdjacentElement('beforeend', ul_links);
+		div_body.insertAdjacentElement('beforeend', h3);
+		div_body.insertAdjacentElement('beforeend', div_meta);
+
+		div_card.insertAdjacentElement('beforeend', div_image);
+		div_card.insertAdjacentElement('beforeend', div_body);
+		li.insertAdjacentElement('beforeend', div_card);
+
+		content_list.insertAdjacentElement('beforeend', li);
 	});
 })();
