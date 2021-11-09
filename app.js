@@ -8,11 +8,11 @@
 			'repo-link': 'github.com',
 			'live-link': 'frontendmentor.com',
 			'image-link':
-				'https://images.unsplash.com/photo-1624265853364-12b264a2f903?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
+				'./huddle-challenge-landing-page/design/desktop-preview.jpg',
 		},
 		{
 			title: 'Huddle landing page with alternating feature blocks 1',
-			stack: ['HTML', 'CSS', 'JS'],
+			stack: ['HTML', 'CSS'],
 			'repo-link': 'github.com',
 			'live-link': 'frontendmentor.com',
 			'image-link':
@@ -68,7 +68,8 @@
 		a_repo.href = challenge['repo-link'];
 		a_live.href = challenge['live-link'];
 		img.src = challenge['image-link'];
-		console.log(a_repo);
+		img.width = 500;
+		img.height = 250;
 		// Stack
 		challenge.stack.forEach((lang) => {
 			const li_lang = document.createElement('li');
@@ -83,7 +84,7 @@
 				const li_text = document.createTextNode(lang);
 				li_lang.appendChild(li_text);
 			} else {
-				li_lang.classList.add('item__lang-js');
+				li_lang.classList.add('item__lang-script');
 				const li_text = document.createTextNode(lang);
 				li_lang.appendChild(li_text);
 			}
