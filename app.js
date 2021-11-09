@@ -18,12 +18,25 @@
 			'image-link': './clipboard-landing-page/design/desktop-preview.jpg',
 		},
 		{
-			title: 'Huddle landing page with alternating feature blocks 2',
+			title: 'Bookmark landing page',
 			stack: ['HTML', 'SASS', 'JS'],
-			'repo-link': 'github.com',
-			'live-link': 'frontendmentor.com',
-			'image-link':
-				'https://images.unsplash.com/photo-1624265853364-12b264a2f903?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
+			'repo-link': './bookmark-landing-page',
+			'live-link': './bookmark-landing-page/index.html',
+			'image-link': './bookmark-landing-page/design/desktop-preview.jpg',
+		},
+		{
+			title: 'Project tracking intro component',
+			stack: ['HTML', 'SASS', 'JS'],
+			'repo-link': './project-tracking',
+			'live-link': './project-tracking',
+			'image-link': './project-tracking/design/desktop-preview.jpg',
+		},
+		{
+			title: 'Insure landing page',
+			stack: ['HTML', 'SASS', 'JS'],
+			'repo-link': './insure-landing-page',
+			'live-link': './insure-landing-page',
+			'image-link': './insure-landing-page/design/desktop-preview.jpg',
 		},
 	];
 
