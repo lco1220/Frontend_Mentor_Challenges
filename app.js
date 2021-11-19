@@ -5,7 +5,8 @@
 		{
 			title: 'Huddle landing page with alternating feature blocks',
 			stack: ['HTML', 'CSS'],
-			'repo-link': './huddle-challenge-landing-page/',
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/huddle-challenge-landing-page',
 			'live-link': './huddle-challenge-landing-page/',
 			'image-link':
 				'./huddle-challenge-landing-page/design/desktop-preview.jpg',
@@ -13,28 +14,32 @@
 		{
 			title: 'Clipboard landing page',
 			stack: ['HTML', 'SASS'],
-			'repo-link': './clipboard-landing-page',
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/clipboard-landing-page',
 			'live-link': './clipboard-landing-page',
 			'image-link': './clipboard-landing-page/design/desktop-preview.jpg',
 		},
 		{
 			title: 'Bookmark landing page',
 			stack: ['HTML', 'SASS', 'JS'],
-			'repo-link': './bookmark-landing-page',
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/bookmark-landing-page',
 			'live-link': './bookmark-landing-page/index.html',
 			'image-link': './bookmark-landing-page/design/desktop-preview.jpg',
 		},
 		{
 			title: 'Project tracking intro component',
 			stack: ['HTML', 'SASS', 'JS'],
-			'repo-link': './project-tracking',
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/project-tracking',
 			'live-link': './project-tracking',
 			'image-link': './project-tracking/design/desktop-preview.jpg',
 		},
 		{
 			title: 'Insure landing page',
 			stack: ['HTML', 'SASS', 'JS'],
-			'repo-link': './insure-landing-page',
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/insure-landing-page',
 			'live-link': './insure-landing-page',
 			'image-link': './insure-landing-page/design/desktop-preview.jpg',
 		},
