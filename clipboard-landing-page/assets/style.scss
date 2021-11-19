@@ -1,0 +1,441 @@
+@import './variables';
+@import './mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, 
+html {
+  @include dimension(100%,100%);
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight-400;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#main {
+  position: relative;
+}
+
+#hero {
+  background-image: url('../images/bg-header-desktop.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+  margin-bottom: 30px;
+  @include dimension(600px, 100%);
+
+  .hero-content {
+    position: absolute;
+    top: 18%;
+    @include dimension(auto, 100%);
+    @include flex(column, center, baseline);
+
+    .hero-img {
+      margin-bottom: 50px;
+    }
+
+    .hero-text {
+      @include flex(column,center,center);
+      text-align: center;
+      margin-bottom: 70px;
+      @include dimension(auto, 50%);
+
+      h1 {
+        color: $darkgrayishblue;
+        font-size: 40px;
+        font-weight: $font-weight-600;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: $grayishblue;
+        font-size: 19px;
+        line-height: 26px;
+      }
+    }
+
+    .hero-btn {
+
+      a{
+        text-decoration: none;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: $font-weight-600;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $strongcyan;
+          margin-right: 10px;
+          border-color: $strongcyan;
+          box-shadow: 0px 3px 2px 1px hsl(171, 66%, 44%), 0px 7px 10px 2px hsl(171, 66%, 85%);
+        }
+
+        &:last-child {
+          background-color: $lightblue;
+          border-color: $lightblue;
+          box-shadow: 0px 3px 2px 1px hsl(233, 100%, 69%), 0px 7px 10px 2px hsl(233, 100%, 90%);
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#main-content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  section {
+    margin-bottom: 80px;
+  }
+
+}
+
+#track-snippets {
+  position: relative;
+  @include dimension(auto,100%);
+
+  .ts-container {
+    @include flex(column,stretch,flex-start);
+
+    .ts-text {
+      text-align: center;
+      align-self: center;
+      margin-bottom: 70px;
+      position: relative;
+      @include dimension(auto,50%);
+
+      h2 {
+        color: $darkgrayishblue;
+        font-size: 34px;
+        font-weight: $font-weight-600;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: $grayishblue;
+        font-size: 16px;
+        line-height: 26px; 
+      }
+
+    }
+
+    .ts-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      left: -30px;
+
+      .ts-img {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+
+      }
+
+      .ts-list {
+        padding-left: 50px;
+        padding-right: 135px;
+        align-self: center;
+        height: auto;
+
+        ul {
+          width: auto;
+
+          li {
+            margin-bottom: 43px;
+
+            h3 {
+              color: $darkgrayishblue;
+              font-size: 24px;
+              font-weight: $font-weight-600;
+              margin-bottom: 15px;
+            }
+
+            p {
+              color: $grayishblue;
+              font-size: 18px;
+              line-height: 26px;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#access-clipboard {
+  position: relative;
+  @include dimension(auto,100%);
+
+  .ac-container {
+    @include flex(column,center,center);
+    padding: 50px 0 0;
+
+    .ac-text {
+      text-align: center;
+      align-self: center;
+      padding-bottom: 70px;
+      @include dimension(auto,50%);
+
+      h2 {
+        color: $darkgrayishblue;
+        font-size: 34px;
+        font-weight: $font-weight-600;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: $grayishblue;
+        font-size: 16px;
+        line-height: 26px; 
+      }
+    }
+
+    .ac-img {
+      padding-top: 20px;
+    }
+
+  }
+
+}
+
+#supercharge {
+  position: relative;
+  @include dimension(auto,100%);
+
+  .sc-container {
+    @include flex(column,center,center);
+    padding: 30px 40px 0;
+
+    .sc-text {
+      text-align: center;
+      @include dimension(auto,50%);
+      align-self: center;
+      padding-bottom: 70px;
+
+      h2 {
+        color: $darkgrayishblue;
+        font-size: 34px;
+        font-weight: $font-weight-600;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: $grayishblue;
+        font-size: 16px;
+        line-height: 26px; 
+      }
+    }
+
+    .sc-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      padding: 0 40px;
+
+      .sc-card {
+        @include dimension(auto,400px);
+
+        .card-container {
+        @include flex(column,center,center);
+        text-align: center;
+
+          img {
+            margin-bottom: 35px;
+            @include dimension(30px,auto);
+          }
+
+          h3 {
+            color: $darkgrayishblue;
+            font-size: 22px;
+            font-weight: $font-weight-600;
+            margin-bottom: 15px;
+          }
+
+          p {
+            color: $grayishblue;
+            font-size: 18px;
+            line-height: 26px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#logo-group {
+  position: relative;
+  @include dimension(auto,100%);
+  padding: 60px 40px 0;
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+#ios-mac {
+  position: relative;
+  @include dimension(auto,100%);
+
+  .imac-container {
+    @include flex(column,center,center);
+    padding: 60px 40px 0;
+
+    .imac-text {
+      text-align: center;
+      @include dimension(auto,50%);
+      margin-bottom: 36px;
+
+      h2 {
+        color: $darkgrayishblue;
+        font-size: 34px;
+        font-weight: $font-weight-600;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: $grayishblue;
+        font-size: 13px;
+        line-height: 26px; 
+      }
+    }
+
+    .imac-btn {
+      a{
+        text-decoration: none;
+        color: #fff;
+        padding: 18px 35px 14px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: $font-weight-600;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $strongcyan;
+          margin-right: 10px;
+          border-color: $strongcyan;
+          box-shadow: 0px 3px 2px 1px hsl(171, 66%, 44%), 0px 7px 10px 2px hsl(171, 66%, 85%);
+        }
+
+        &:last-child {
+          background-color: $lightblue;
+          border-color: $lightblue;
+          box-shadow: 0px 3px 2px 1px hsl(233, 100%, 69%), 0px 7px 10px 2px hsl(233, 100%, 90%);
+        }
+
+      }
+    }
+
+  }
+
+}
+
+footer {
+  margin-top: 50px;
+  background-color: rgb(233, 233, 233);
+  .footer-container {
+    color: $darkgrayishblue;
+    padding: 50px;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      justify-items: center;
+      align-items: center;
+
+      .footer-img {
+        @include dimension(60px,60px);
+        img {
+          @include dimension(auto,100%);
+        }
+      }
+
+      .footer-links {
+        @include dimension(auto,100%);
+        justify-self: start;
+        align-self: start;
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          
+          li {
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: $font-weight-400;
+            transition: color .50s ease-in;
+
+            &:hover {
+              color: $strongcyan;
+              cursor: pointer;
+              
+            }
+          }
+        }
+      }
+
+      .footer-socials {
+        a {
+          @include dimension(25px,30px);
+          text-decoration: none;
+          color: $darkgrayishblue;
+          ion-icon {
+            @include dimension(25px,30px);
+            transition: color .50s ease-in;
+            &:hover {
+              color: $strongcyan;
+              cursor: pointer;
+              
+            }
+          }
+        }
+      }
+    }
+
+    .attribution {
+      text-align: center;
+      padding-top: 30px;
+      font-size: 12px;
+      color: $grayishblue;
+      a {
+        color:$darkgrayishblue;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+}
+
+@import './mediaqueries';
