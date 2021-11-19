@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./style/style.css">
+  
+  <title>Project tracking intro component by Ohlie</title>
+
+</head>
+<body>
+
+  <div class="container grid">      
+
+    <nav class="navbar grid">
+      <div class="navbar__logo">
+        <img src="./images/logo.svg" alt="project tracking logo">
+      </div>
+      <div class="navbar__links">
+        <ul class="navbar__list grid">
+          <li class="navbar__list__li"><a href="#" class="navbar__link">Product</a></li>
+          <li class="navbar__list__li"><a href="#" class="navbar__link">Features</a></li>
+          <li class="navbar__list__li"><a href="#" class="navbar__link">Pricing</a></li>
+          <li class="navbar__list__li">
+            <a href="#" class="navbar__link navbar__link--grey navbar__link--dot"></a>
+          </li>
+          <li class="navbar__list__li">
+            <a href="#" class="navbar__link navbar__link--grey">Login</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar__mobile" id="navbar__mobile">
+        <img src="/images/icon-hamburger.svg" alt="mobile__icon__hamburger" class="navbar__icon navbar__icon--active" id="navbar__icon--ham">
+        <img src="/images/icon-close.svg" alt="mobile__icon__close" id="navbar__icon--close" class="navbar__icon">
+      </div>
+    </nav>
+
+    <main class="main grid">
+      <div class="hero__content grid">
+        <h3 class="hero__subtitle"><span class="hero__span">New</span> Monograph Dashboard</h3>
+        <h1 class="hero__title">Powerful insights into your team</h1>
+        <p class="hero__p">Project planning and time tracking <br>for agile teams</p>
+        <div class="hero__buttons">
+          <button class="hero__button hero__button--red">Schedule a demo</button>
+          <button class="hero__button hero__button--white">to see a live preview</button>
+        </div>
+      </div>
+      <div class="hero__img">
+        <img src="./images/illustration-devices.svg" alt="hero image" class="figure__image" />
+      </div>
+    </main>
+
+  </div>
+
+  <div class="square">
+  </div>
+
+  <script>
+
+    const navbar__icons = document.getElementById('navbar__mobile'); 
+    const icon__hamburger = document.getElementById('navbar__icon--ham');
+    const icon__close = document.getElementById('navbar__icon--close');
+    const navbar__list = document.getElementsByClassName('navbar__list');
+    
+    console.log()
+
+    navbar__icons.addEventListener('click', ()=> {
+
+      if(icon__hamburger.classList.contains('navbar__icon--active')) {
+        navbar__list[0].classList.add('navbar__list--active')
+      } else {
+        navbar__list[0].classList.remove('navbar__list--active')
+
+      }
+      
+      icon__hamburger.classList.toggle('navbar__icon--active');
+
+      icon__close.classList.toggle('navbar__icon--active')
+    })
+    
+  </script>
+
+</body>
+</html>
