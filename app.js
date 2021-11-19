@@ -92,7 +92,7 @@
 		const live_text = document.createTextNode('live');
 		a_repo.href = challenge['repo-link'];
 		a_live.href = challenge['live-link'];
-		a_live.target = '_blank';
+		a_repo.target = '_blank';
 		a_live.target = '_blank';
 		img.src = challenge['image-link'];
 		img.width = 500;
