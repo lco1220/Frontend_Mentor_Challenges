@@ -43,6 +43,14 @@
 			'live-link': './insure-landing-page',
 			'image-link': './insure-landing-page/design/desktop-preview.jpg',
 		},
+		{
+			title: 'Profile card component',
+			stack: ['HTML', 'CSS'],
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/profile-card-component',
+			'live-link': './profile-card-component',
+			'image-link': './profile-card-component/design/desktop-preview.jpg',
+		},
 	];
 
 	const content_list = document.querySelector('.content__lists');
