@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Frontend Mentor Challenge. Solution by LCO"
+		/>
+		<meta
+			name="keywords"
+			content="frontendmentor frontend mentor web development"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script defer src="./assets/js/app.js"></script>
+
+		<title>Frontend Mentor | Social media dashboard with theme switcher</title>
+	</head>
+	<body class="">
+		<div class="container">
+			<nav class="navbar">
+				<div class="navbar__left">
+					<h1 class="navbar__title">Social Media Dashboard</h1>
+					<p class="navbar__subtitle">Total Followers: 23,004</p>
+				</div>
+				<div class="navbar__right">
+					<div class="navbar__toggle">
+						<label class="toggle__mode">
+							<span> Dark Mode </span>
+							<input type="checkbox" />
+							<span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+			</nav>
+			<main class="main__container">
+				<section class="section__cards">
+					<div class="card card--facebook">
+						<div class="card__inner">
+							<div class="card__header">
+								<img
+									src="./assets/images/icon-facebook.svg"
+									alt="facebook logo"
+									class="card__logo"
+								/>
+								<span>@nathanf</span>
+							</div>
+							<div class="card__body">
+								<div class="card__stat">
+									<span class="card__value">1987</span>
+									<span class="card__label">followers</span>
+								</div>
+							</div>
+							<div class="card__footer">
+								<img src="./assets/images/icon-up.svg" alt="icon-up" />
+								<span class="card__diff card__diff--up">12 Today</span>
+							</div>
+						</div>
+					</div>
+					<div class="card card--twitter">
+						<div class="card__inner">
+							<div class="card__header">
+								<img
+									src="./assets/images/icon-twitter.svg"
+									alt="facebook logo"
+									class="card__logo"
+								/>
+								<span>@nathanf</span>
+							</div>
+							<div class="card__body">
+								<div class="card__stat">
+									<span class="card__value">1044</span>
+									<span class="card__label">followers</span>
+								</div>
+							</div>
+							<div class="card__footer">
+								<img src="./assets/images/icon-up.svg" alt="icon-up" />
+								<span class="card__diff card__diff--up">99 Today</span>
+							</div>
+						</div>
+					</div>
+					<div class="card card--instagram">
+						<div class="card__inner">
+							<div class="card__header">
+								<img
+									src="./assets/images/icon-instagram.svg"
+									alt="facebook logo"
+									class="card__logo"
+								/>
+								<span>@nathanf</span>
+							</div>
+							<div class="card__body">
+								<div class="card__stat">
+									<span class="card__value">11k</span>
+									<span class="card__label">followers</span>
+								</div>
+							</div>
+							<div class="card__footer">
+								<img src="./assets/images/icon-up.svg" alt="icon-up" />
+								<span class="card__diff card__diff--up">1099 Today</span>
+							</div>
+						</div>
+					</div>
+					<div class="card card--youtube">
+						<div class="card__inner">
+							<div class="card__header">
+								<img
+									src="./assets/images/icon-youtube.svg"
+									alt="facebook logo"
+									class="card__logo"
+								/>
+								<span>Nathan F.</span>
+							</div>
+							<div class="card__body">
+								<div class="card__stat">
+									<span class="card__value">8239</span>
+									<span class="card__label">Subscribers</span>
+								</div>
+							</div>
+							<div class="card__footer">
+								<img src="./assets/images/icon-down.svg" alt="icon-down" />
+								<span class="card__diff card__diff--down">12 Today</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section__overview">
+					<h2 class="overview__title">Overview - Today</h2>
+					<div class="section__cards">
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Page Views</span>
+								<img
+									src="./assets/images/icon-facebook.svg"
+									alt="facebook logo"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">87</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-up.svg" alt="icon-up" />
+									<span class="card__diff card__diff--up">3% </span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Likes</span>
+								<img
+									src="./assets/images/icon-facebook.svg"
+									alt="facebook logo"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">52</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-down.svg" alt="icon-down" />
+									<span class="card__diff card__diff--down">3%</span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Likes</span>
+								<img
+									src="./assets/images/icon-instagram.svg"
+									alt="instagram logo"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">5462</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-up.svg" alt="icon-up" />
+									<span class="card__diff card__diff--up">2257%</span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Profile Views</span>
+								<img
+									src="./assets/images/icon-instagram.svg"
+									alt="instagram logo"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">52k</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-up.svg" alt="icon-up" />
+									<span class="card__diff card__diff--up">1375%</span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Retweets</span>
+								<img
+									src="./assets/images/icon-twitter.svg"
+									alt="twitter logo"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">117</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-up.svg" alt="icon-up" />
+									<span class="card__diff card__diff--up">303%</span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Likes</span>
+								<img
+									src="./assets/images/icon-twitter.svg"
+									alt="twitter logo"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">507</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-up.svg" alt="icon-up" />
+									<span class="card__diff card__diff--up">553%</span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Likes</span>
+								<img
+									src="./assets/images/icon-youtube.svg"
+									alt="icon-youtube"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">107</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-down.svg" alt="icon-down" />
+									<span class="card__diff card__diff--down">19%</span>
+								</div>
+							</div>
+						</div>
+						<div class="card card--overview">
+							<div class="card__header">
+								<span>Total Views</span>
+								<img
+									src="./assets/images/icon-youtube.svg"
+									alt="icon-youtube"
+								/>
+							</div>
+							<div class="card__body">
+								<span class="card__value">1407</span>
+
+								<div class="card__footer">
+									<img src="./assets/images/icon-down.svg" alt="icon-down" />
+									<span class="card__diff card__diff--down">12%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<div class="attribution">
+			<p>
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://github.com/lco1220" target="_blank">leorieleco</a>.
+			</p>
+			<p>
+				My <a href="lco-frontend-mentor.netlify.app/ ">Compilation</a> of
+				Frontend Mentor Challenges
+			</p>
+		</div>
+	</body>
+</html>

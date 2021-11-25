@@ -1,0 +1,50 @@
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: rem(36) rem(24);
+
+	@include breakpoint(large) {
+		max-width: rem(1110);
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.main__container {
+	padding: rem(20) 0;
+}
+
+.section__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+	gap: rem(20);
+	justify-items: center;
+}
+
+.section__overview {
+	margin-top: rem(36);
+	display: grid;
+	gap: rem(20);
+	grid-template-columns: 1fr;
+	justify-items: normal;
+
+	.overview__title {
+		font-size: rem(22);
+		justify-self: start;
+	}
+}
+
+.attribution {
+	text-align: center;
+	color: var(--dark-white-text);
+	margin-bottom: rem(15);
+
+	p {
+		margin-bottom: rem(5);
+	}
+
+	a {
+		font-weight: 700;
+		color: inherit;
+	}
+}

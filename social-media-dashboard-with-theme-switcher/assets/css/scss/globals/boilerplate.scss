@@ -1,0 +1,51 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--dark-bg);
+	color: var(--dark-white-text);
+	font-family: var(--font-inter);
+	font-size: rem(12);
+}
+
+body.mode-light {
+	background-color: var(--light-bg);
+	color: var(--light-text1);
+
+	.navbar__left .navbar__title {
+		color: var(--light-text2);
+	}
+
+	.navbar__left .navbar__subtitle,
+	.navbar__right {
+		color: var(--light-text1);
+	}
+
+	.card__inner {
+		background-color: var(--light-bg-card);
+		color: var(--light-text1);
+	}
+
+	.card__stat .card__value,
+	.card--overview .card__value {
+		color: var(--light-text2);
+	}
+
+	.card--overview {
+		background-color: var(--light-bg-card);
+		color: var(--light-text1);
+	}
+
+	.attribution {
+		color: var(--light-text2);
+	}
+}
