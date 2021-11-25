@@ -51,6 +51,15 @@
 			'live-link': './profile-card-component',
 			'image-link': './profile-card-component/design/desktop-preview.jpg',
 		},
+		{
+			title: 'Social Media Dashboard with theme switcher',
+			stack: ['HTML', 'SASS', 'JS'],
+			'repo-link':
+				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/social-media-dashboard-with-theme-switcher',
+			'live-link': './social-media-dashboard-with-theme-switcher',
+			'image-link':
+				'./social-media-dashboard-with-theme-switcher/design/desktop-preview.jpg',
+		},
 	];
 
 	const content_list = document.querySelector('.content__lists');
