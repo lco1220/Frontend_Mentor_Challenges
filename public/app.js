@@ -16,8 +16,8 @@
 			stack: ['HTML', 'SASS'],
 			'repo-link':
 				'https://github.com/lco1220/Frontend_Mentor_Challenges/tree/main/clipboard-landing-page',
-			'live-link': './clipboard-landing-page',
-			'image-link': './clipboard-landing-page/design/desktop-preview.jpg',
+			'live-link': '../clipboard-landing-page',
+			'image-link': '../clipboard-landing-page/design/desktop-preview.jpg',
 		},
 		{
 			title: 'Bookmark landing page',
