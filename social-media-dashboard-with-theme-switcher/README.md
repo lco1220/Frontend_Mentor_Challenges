@@ -12,6 +12,7 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
   - [Author](#author)
 
@@ -35,7 +36,7 @@ Users should be able to:
 
 <!-- - Solution URL: [](https://your-solution-url.com) -->
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Here](https://lco-frontend-mentor.netlify.app/social-media-dashboard-with-theme-switcher/)
 
 ## My process
 
@@ -47,10 +48,12 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-<!-- ### What I learned
+### What I learned
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<body class="mode-light">
+	...
+</body>
 ```
 
 ### Useful resources
