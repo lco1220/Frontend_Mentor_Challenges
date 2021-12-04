@@ -64,10 +64,21 @@ a:active {
 .card__inner {
   padding: 1.25rem;
   background-color: #fff; }
+  @media (min-width: 40em) {
+    .card__inner {
+      padding: 1.25rem 1.5625rem;
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+      gap: 1.875rem; } }
 
 .card__header {
   position: relative;
   padding: 0.3125rem 0; }
+  @media (min-width: 40em) {
+    .card__header {
+      display: flex;
+      flex-direction: row;
+      align-items: center; } }
 
 .card__header img {
   position: absolute;
@@ -76,11 +87,27 @@ a:active {
   transform: translateY(-70%);
   width: 3.125rem;
   height: 3.125rem; }
+  @media (min-width: 40em) {
+    .card__header img {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 6.25rem;
+      height: 6.25rem; } }
 
 .card__info {
   margin: 0.625rem 0 1.125rem;
   padding-bottom: 1.125rem;
   border-bottom: solid 1px var(--dark-grayish-cyan); }
+  @media (min-width: 40em) {
+    .card__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 0;
+      padding-bottom: 0;
+      border-bottom: none; } }
 
 .info__joblisting {
   color: var(--prime-des-dark-cyan);
@@ -91,6 +118,9 @@ a:active {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem; }
+  @media (min-width: 40em) {
+    .info__joblisting {
+      margin-bottom: 0; } }
   .info__joblisting .info__company {
     margin-right: 0.75rem; }
   .info__joblisting .info__badge {
@@ -136,6 +166,12 @@ a:active {
     height: 0.25rem;
     border-radius: 50%;
     margin: 0 0.875rem; }
+
+@media (min-width: 40em) {
+  .card__tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center; } }
 
 .tags__list {
   display: flex;

@@ -11,11 +11,24 @@
 .card__inner {
 	padding: rem(20);
 	background-color: #fff;
+
+	@include breakpoint(medium) {
+		padding: rem(20) rem(25);
+		display: grid;
+		grid-template-columns: auto 1fr 1fr;
+		gap: rem(30);
+	}
 }
 
 .card__header {
 	position: relative;
 	padding: rem(5) 0;
+
+	@include breakpoint(medium) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 }
 
 .card__header img {
@@ -25,12 +38,31 @@
 	transform: translateY(-70%);
 	width: rem(50);
 	height: rem(50);
+
+	@include breakpoint(medium) {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: none;
+		width: rem(100);
+		height: rem(100);
+	}
 }
 
 .card__info {
 	margin: rem(10) 0 rem(18);
 	padding-bottom: rem(18);
 	border-bottom: solid 1px var(--dark-grayish-cyan);
+
+	@include breakpoint(medium) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		margin: 0;
+		padding-bottom: 0;
+		border-bottom: none;
+	}
 }
 
 .info__joblisting {
@@ -42,6 +74,10 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: rem(8);
+
+	@include breakpoint(medium) {
+		margin-bottom: 0;
+	}
 
 	.info__company {
 		margin-right: rem(12);
@@ -102,6 +138,14 @@
 		height: rem(4);
 		border-radius: 50%;
 		margin: 0 rem(14);
+	}
+}
+
+.card__tags {
+	@include breakpoint(medium) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 }
 
