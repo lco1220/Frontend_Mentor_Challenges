@@ -1,9 +1,14 @@
 // @use '../util/' as *;
 .card {
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: var(--prime-des-dark-cyan);
 	width: 100%;
+	border-left: 5px solid transparent;
+}
+
+.card__inner {
 	padding: rem(20);
+	background-color: #fff;
 }
 
 .card__header {
@@ -110,8 +115,9 @@
 	.tag__item {
 		font-weight: 700;
 		background-color: var(--light-grayish-cyan-bg);
-		padding: rem(10) rem(8);
+		padding: rem(8) rem(9);
 		border-radius: rem(5);
-		// margin: rem(5);
+		margin: rem(5) rem(15);
+		margin-left: 0;
 	}
 }

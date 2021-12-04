@@ -51,9 +51,13 @@ a:active {
 
 .card {
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--prime-des-dark-cyan);
   width: 100%;
-  padding: 1.25rem; }
+  border-left: 5px solid transparent; }
+
+.card__inner {
+  padding: 1.25rem;
+  background-color: #fff; }
 
 .card__header {
   position: relative;
@@ -138,8 +142,10 @@ a:active {
   .tags__list .tag__item {
     font-weight: 700;
     background-color: var(--light-grayish-cyan-bg);
-    padding: 0.625rem 0.5rem;
-    border-radius: 0.3125rem; }
+    padding: 0.5rem 0.5625rem;
+    border-radius: 0.3125rem;
+    margin: 0.3125rem 0.9375rem;
+    margin-left: 0; }
 
 header {
   background-color: var(--prime-des-dark-cyan);
