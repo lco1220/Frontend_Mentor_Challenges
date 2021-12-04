@@ -1,0 +1,117 @@
+// @use '../util/' as *;
+.card {
+	border-radius: 5px;
+	background-color: #fff;
+	width: 100%;
+	padding: rem(20);
+}
+
+.card__header {
+	position: relative;
+	padding: rem(5) 0;
+}
+
+.card__header img {
+	position: absolute;
+	top: -50%;
+	left: 0;
+	transform: translateY(-70%);
+	width: rem(50);
+	height: rem(50);
+}
+
+.card__info {
+	margin: rem(10) 0 rem(18);
+	padding-bottom: rem(18);
+	border-bottom: solid 1px var(--dark-grayish-cyan);
+}
+
+.info__company {
+	color: var(--prime-des-dark-cyan);
+	font-weight: 700;
+	font-size: rem(14);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: rem(8);
+
+	.info__name {
+		margin-right: rem(12);
+	}
+
+	.info__badge {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+
+		.badge {
+			color: var(--light-grayish-cyan-bg);
+			padding: rem(7) rem(7);
+			border-radius: rem(10);
+			font-size: rem(10);
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: rem(7);
+			margin-right: rem(8);
+		}
+
+		.badge--new {
+			background-color: var(--prime-des-dark-cyan);
+		}
+
+		.badge--featured {
+			background-color: var(--very-dark-grayish-cyan);
+		}
+	}
+}
+
+.job__title {
+	font-size: rem(16);
+	text-transform: capitalize;
+	margin-bottom: rem(10);
+}
+
+.job__description-list {
+	color: var(--dark-grayish-cyan);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: rem(12);
+
+	.job__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.job__item:not(:last-child)::after {
+		content: '';
+		background-color: var(--dark-grayish-cyan);
+		display: block;
+		width: rem(4);
+		height: rem(4);
+		border-radius: 50%;
+		margin: 0 rem(14);
+	}
+}
+
+.tags__list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	color: var(--prime-des-dark-cyan);
+	font-size: rem(14);
+
+	.tag__item {
+		font-weight: 700;
+		background-color: var(--light-grayish-cyan-bg);
+		padding: rem(10) rem(8);
+		border-radius: rem(5);
+		// margin: rem(5);
+	}
+}

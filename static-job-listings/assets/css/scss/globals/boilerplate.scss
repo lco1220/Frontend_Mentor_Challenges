@@ -1,0 +1,22 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--light-grayish-cyan-bg);
+	color: var(--very-dark-grayish-cyan);
+	font-family: var(--font-spartan);
+	font-size: rem(15);
+}
+
+ul {
+	list-style-type: none;
+}

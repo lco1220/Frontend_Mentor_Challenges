@@ -1,0 +1,13 @@
+h1 {
+	font-size: rem(24);
+	font-weight: 700;
+	@include breakpoint(large) {
+		font-size: rem(28);
+	}
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
