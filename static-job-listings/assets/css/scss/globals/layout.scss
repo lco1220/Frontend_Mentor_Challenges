@@ -9,3 +9,9 @@
 		padding-right: 0;
 	}
 }
+
+.card__container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rem(50);
+}

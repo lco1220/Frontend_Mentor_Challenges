@@ -4,6 +4,8 @@
 	background-color: var(--prime-des-dark-cyan);
 	width: 100%;
 	border-left: 5px solid transparent;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 20px 25px -5px,
+		rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .card__inner {
@@ -31,7 +33,7 @@
 	border-bottom: solid 1px var(--dark-grayish-cyan);
 }
 
-.info__company {
+.info__joblisting {
 	color: var(--prime-des-dark-cyan);
 	font-weight: 700;
 	font-size: rem(14);
@@ -41,7 +43,7 @@
 	align-items: center;
 	margin-bottom: rem(8);
 
-	.info__name {
+	.info__company {
 		margin-right: rem(12);
 	}
 
@@ -73,7 +75,7 @@
 	}
 }
 
-.job__title {
+.job__position {
 	font-size: rem(16);
 	text-transform: capitalize;
 	margin-bottom: rem(10);
