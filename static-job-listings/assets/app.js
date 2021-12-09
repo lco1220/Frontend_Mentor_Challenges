@@ -1,5 +1,6 @@
 (() => {
 	let card__container = document.querySelector('.card__container');
+
 	async function fetchData() {
 		let response = await fetch('/static-job-listings/data.json');
 		let data = await response.json();
@@ -31,9 +32,7 @@
 			let location = document.createElement('span');
 			let tags__list = document.createElement('ul');
 			let tag__role = document.createElement('li');
-			let role__span = document.createElement('span');
 			let tag__level = document.createElement('li');
-			let level__span = document.createElement('span');
 
 			if (item.new || item.featured) {
 				if (item.new) {
@@ -56,10 +55,9 @@
 			tag__level.setAttribute('data-level', item.level);
 			let role__text = document.createTextNode(item.role);
 			let level__text = document.createTextNode(item.level);
-			role__span.appendChild(role__text);
-			level__span.appendChild(level__text);
-			tag__level.appendChild(level__span);
-			tag__role.appendChild(role__span);
+			tag__role.appendChild(role__text);
+			tag__level.appendChild(level__text);
+
 			tags__list.insertAdjacentElement('beforeend', tag__role);
 			tags__list.insertAdjacentElement('beforeend', tag__level);
 
@@ -69,8 +67,8 @@
 				let lang__text = document.createTextNode(language);
 				tag__lang.setAttribute('data-languages', language);
 				tag__lang.classList.add('tag__item');
-				lang__span.appendChild(lang__text);
-				tag__lang.appendChild(lang__span);
+				tag__lang.appendChild(lang__text);
+				// tag__lang.appendChild(lang__span);
 				tags__list.insertAdjacentElement('beforeend', tag__lang);
 			});
 
@@ -145,8 +143,18 @@
 
 			card.appendChild(card__inner);
 			card__container.insertAdjacentElement('beforeend', card);
-			console.log(item);
 		});
+
+		if (document.querySelectorAll('.tag__item')) {
+			console.log('test');
+			let tag__item = document.querySelectorAll('.tag__item');
+
+			tag__item.forEach((item) => {
+				item.addEventListener('click', (e) => {
+					console.log(e.target.dataset);
+				});
+			});
+		}
 	}
 
 	listCard();
