@@ -1,0 +1,15 @@
+.filter__container {
+	padding-top: 0;
+
+	.filter {
+		position: relative;
+		margin-top: -25px;
+		background-color: #fff;
+		border-radius: 5px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: rem(20) rem(15);
+	}
+}
