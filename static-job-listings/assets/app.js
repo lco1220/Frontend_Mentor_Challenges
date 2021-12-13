@@ -7,9 +7,43 @@
 		return data;
 	}
 
-	async function listCard() {
-		let items = await fetchData();
+	const removeChilds = (parent) => {
+		while (parent.lastChild) {
+			parent.removeChild(parent.lastChild);
+		}
+	};
 
+	async function filterData(datakey, attr) {
+		const jobs = await fetchData();
+		if (datakey == 'role') {
+			let roles = jobs.filter((job) => {
+				return job.role == attr.role;
+			});
+			removeChilds(card__container);
+			listCard(roles);
+		} else if (datakey == 'level') {
+			let levels = jobs.filter((job) => {
+				return job.level == attr.level;
+			});
+			removeChilds(card__container);
+			listCard(levels);
+		} else if (datakey == 'languages') {
+			let languages = jobs.filter((job) => {
+				return job.languages.includes(attr.languages);
+			});
+			removeChilds(card__container);
+			listCard(languages);
+		} else {
+			let tools = jobs.filter((job) => {
+				return job.tools.includes(attr.tools);
+			});
+			removeChilds(card__container);
+			listCard(tools);
+		}
+	}
+
+	async function listCard(jobs) {
+		let items = await jobs;
 		items.forEach((item) => {
 			// Create element
 			let card = document.createElement('div');
@@ -74,12 +108,10 @@
 
 			item.tools.forEach((tool) => {
 				let tag__tool = document.createElement('li');
-				let tool__span = document.createElement('span');
 				let tool__text = document.createTextNode(tool);
 				tag__tool.setAttribute('data-tools', tool);
 				tag__tool.classList.add('tag__item');
-				tool__span.appendChild(tool__text);
-				tag__tool.appendChild(tool__span);
+				tag__tool.appendChild(tool__text);
 				tags__list.insertAdjacentElement('beforeend', tag__tool);
 			});
 
@@ -146,16 +178,19 @@
 		});
 
 		if (document.querySelectorAll('.tag__item')) {
-			console.log('test');
 			let tag__item = document.querySelectorAll('.tag__item');
 
 			tag__item.forEach((item) => {
 				item.addEventListener('click', (e) => {
-					console.log(e.target.dataset);
+					let dataset = e.target.dataset;
+					let key = Object.keys(dataset)[0];
+					filterData(key, dataset);
 				});
 			});
 		}
 	}
 
-	listCard();
+	let jobs = fetchData();
+
+	listCard(jobs);
 })();

@@ -188,7 +188,8 @@ a:active {
     padding: 0.5rem 0.5625rem;
     border-radius: 0.3125rem;
     margin: 0.3125rem 0.9375rem;
-    margin-left: 0; }
+    margin-left: 0;
+    cursor: pointer; }
 
 header {
   background-color: var(--prime-des-dark-cyan);
