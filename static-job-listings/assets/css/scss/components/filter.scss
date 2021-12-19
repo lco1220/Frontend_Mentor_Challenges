@@ -13,3 +13,69 @@
 		padding: rem(20) rem(15);
 	}
 }
+
+.filter__list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.filter__tags {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: var(--prime-des-dark-cyan);
+	font-size: rem(12);
+	font-weight: 700;
+	background-color: var(--light-grayish-cyan-bg);
+	margin: rem(10);
+	margin-left: rem(0);
+	border-radius: rem(5);
+	span {
+		padding: rem(10) rem(8);
+	}
+
+	.remove__btn {
+		cursor: pointer;
+		background-image: url('/static-job-listings/images/icon-remove.svg');
+		object-fit: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		border: none;
+		color: #fff;
+		font-weight: 700;
+		background-color: var(--prime-des-dark-cyan);
+		height: 100%;
+		width: rem(40);
+		// padding: rem(15);
+		border-top-right-radius: rem(5);
+		border-bottom-right-radius: rem(5);
+		transition: background-color 200ms ease-in;
+
+		&:hover {
+			background-color: var(--very-dark-grayish-cyan);
+		}
+	}
+}
+
+.filter__clear {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.clear__btn {
+		cursor: pointer;
+		text-transform: capitalize;
+		color: var(--dark-grayish-cyan);
+		border: none;
+		background-color: transparent;
+		font-family: var(--font-spartan);
+		font-weight: 700;
+		font-size: rem(14);
+
+		&:hover {
+			color: var(--prime-des-dark-cyan);
+			border-bottom: solid rem(1) var(--prime-des-dark-cyan);
+		}
+	}
+}
