@@ -115,6 +115,11 @@
 	font-size: rem(16);
 	text-transform: capitalize;
 	margin-bottom: rem(10);
+	cursor: pointer;
+
+	&:hover {
+		color: var(--prime-des-dark-cyan);
+	}
 }
 
 .job__description-list {
@@ -165,6 +170,12 @@
 		border-radius: rem(5);
 		margin: rem(5) rem(15);
 		margin-left: 0;
+		transition: all 200ms ease-in;
 		cursor: pointer;
+
+		&:hover {
+			color: var(--light-grayish-cyan-bg);
+			background-color: var(--prime-des-dark-cyan);
+		}
 	}
 }

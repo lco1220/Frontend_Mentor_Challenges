@@ -1,5 +1,9 @@
 (() => {
+	'use strict';
 	let card__container = document.querySelector('.card__container');
+	let filter__container = document.querySelector('.filter__container');
+	let clear__btn = document.querySelector('.clear__btn');
+	let filter__array = [];
 
 	async function fetchData() {
 		let response = await fetch('/static-job-listings/data.json');
@@ -15,6 +19,7 @@
 
 	async function filterData(datakey, attr) {
 		const jobs = await fetchData();
+		console.log(Object.keys(attr)[0]);
 		if (datakey == 'role') {
 			let roles = jobs.filter((job) => {
 				return job.role == attr.role;
@@ -189,6 +194,11 @@
 			});
 		}
 	}
+
+	clear__btn.addEventListener('click', (e) => {
+		filter__container.textContent = '';
+		filter__container.classList.add('remove__filter');
+	});
 
 	let jobs = fetchData();
 

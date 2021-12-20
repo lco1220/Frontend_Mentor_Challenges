@@ -12,6 +12,13 @@
 		justify-content: space-between;
 		padding: rem(20) rem(15);
 	}
+
+	&.remove__filter {
+		margin: 0;
+		padding: 0;
+		width: 0;
+		display: none;
+	}
 }
 
 .filter__list {
@@ -25,14 +32,14 @@
 	flex-direction: row;
 	align-items: center;
 	color: var(--prime-des-dark-cyan);
-	font-size: rem(12);
+	font-size: rem(14);
 	font-weight: 700;
 	background-color: var(--light-grayish-cyan-bg);
 	margin: rem(10);
 	margin-left: rem(0);
-	border-radius: rem(5);
+	border-radius: rem(3);
 	span {
-		padding: rem(10) rem(8);
+		padding: 0 rem(6);
 	}
 
 	.remove__btn {
@@ -45,9 +52,8 @@
 		color: #fff;
 		font-weight: 700;
 		background-color: var(--prime-des-dark-cyan);
-		height: 100%;
-		width: rem(40);
-		// padding: rem(15);
+		height: rem(30);
+		width: rem(30);
 		border-top-right-radius: rem(5);
 		border-bottom-right-radius: rem(5);
 		transition: background-color 200ms ease-in;
